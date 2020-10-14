@@ -53,11 +53,13 @@ const useStyles = makeStyles((theme) => ({
   },
   tabContainer: {
     marginLeft: 'auto',
+    color:'#fff'
   },
   tab: {
     ...theme.typography.tab,
     minWidth: 10,
     marginLeft: '25px',
+    color:'#fff'
   },
   button: {
     ...theme.typography.estimate,
@@ -74,11 +76,11 @@ const useStyles = makeStyles((theme) => ({
   },
   menu: {
     backgroundColor: theme.palette.common.UIBlue,
-    color: 'white',
+    color: '#fff',
   },
   menuItem: {
     ...theme.typography.tab,
-    color: 'white',
+    color: '#fff',
     opacity: 0.7,
     '&:hover': {
       opacity: 1,
@@ -93,14 +95,14 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     height: '50px',
     widht: '50px',
-    color: 'white',
+    color: '#fff',
   },
   drawer: {
     backgroundColor: theme.palette.common.UIBlue,
   },
   drawerItem: {
     ...theme.typography.tab,
-    color: '#fffff',
+    color: '#fff',
     opacity: 0.7,
   },
   drawerEstimate: {

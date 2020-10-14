@@ -24,7 +24,7 @@ export default createMuiTheme({
       fontFamily: 'pacifico',
       fontSize: '1rem',
       textTransform: 'none',
-      color: 'white',
+      color: '#fff',
     },
     h2: {
       fontFamily: 'Raleway',
@@ -56,7 +56,7 @@ export default createMuiTheme({
       color: '#868686',
     },
     subtitle2: {
-      color: 'white',
+      color: '#fff',
       fontSize: '1.25rem',
       fontWeight: 300,
     },
