@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Head from "next/head";
+import Link from '../src/Link'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import ButtonArrow from './ButtonArrow';
+import ButtonArrow from '../src/ui/ButtonArrow';
 
-import websitesIcon from '../../assets/websiteIcon.svg';
-import customSoftwareIcon from '../../assets/Custom Software Icon.svg';
 
 const useStyles = makeStyles((theme) => ({
   specialText: {
@@ -50,10 +49,29 @@ const Services = (props) => {
 
   return (
     <Grid contaner direction='column'>
+      <Head>
+        <title key="title">
+          Top Custom Software Development Services | Arc Development
+        </title>
+
+        <meta
+          name="description"
+          key="description"
+          content="Cutting-edge software, mobile app, and website development services with sleek custom designs - get a free online estimate instantly!"
+        />
+         <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Services"
+          key="og:title"
+        />
+        
+        <meta property="og:url" key="og:url" content="arc.com/services" />
+        <link rel="canonical" key="canonical" href="arc.com/services" />
+      </Head>  
       <Grid item style={{ marginLeft: matcheSM ? 0 : '5em' }}>
         <Typography
           align={matcheSM ? 'center' : undefined}
-          variant='h2'
+          variant='h1'
           gutterBottom
         >
           Services
@@ -88,7 +106,7 @@ const Services = (props) => {
             </Typography>
             <Button
               component={Link}
-              to='/customsoftware'
+              href='/customsoftware'
               className={classes.learnButton}
               variant='outlined'
               onClick={() => {
@@ -140,7 +158,7 @@ const Services = (props) => {
             </Typography>
             <Button
               component={Link}
-              to='/mobileapps'
+              href='/mobileapps'
               className={classes.learnButton}
               variant='outlined'
               onClick={() => {
@@ -193,7 +211,7 @@ const Services = (props) => {
             </Typography>
             <Button
               component={Link}
-              to='/websites'
+              href='/websites'
               className={classes.learnButton}
               variant='outlined'
               onClick={() => {

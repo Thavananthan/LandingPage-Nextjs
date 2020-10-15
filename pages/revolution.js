@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from "next/head";
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -35,10 +36,29 @@ const Revolution = (props) => {
 
   return (
     <Grid container direction='column' alignItems='center'>
+       <Head>
+        <title key="title">
+          The Revolution - Cutting-Edge Software | Arc Development
+        </title>
+
+        <meta
+          name="description"
+          key="description"
+          content="Visionary insights, coupled with cutting-edge technology, is a recipe for revolution. Get a free online estimate instantly!"
+        />
+   
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | The Revolution"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/revolution" />
+        <link rel="canonical" key="canonical" href="arc.com/revolution" />
+       </Head> 
       <Grid item className={classes.rowContainer} style={{ marginTop: '2em' }}>
         <Typography
           align={matchesMD ? 'center' : undefined}
-          variant='h2'
+          variant='h1'
           style={{ fontFamily: 'Pacifico' }}
         >
           {' '}
@@ -305,8 +325,8 @@ const Revolution = (props) => {
           <img
             src='/assets/consultationIcon.svg'
             alt='handshake'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
-          />
+            width="100%"
+            style={{ maxWidth:'40em' }}          />
         </Grid>
       </Grid>
       {/* next */}
@@ -371,8 +391,8 @@ const Revolution = (props) => {
           <img
             src='/assets/mockupIcon.svg'
             alt='basic website design outline'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
-          />
+            width="100%"
+            style={{ maxWidth:'40em' }}          />
         </Grid>
       </Grid>
       <Grid
@@ -437,7 +457,9 @@ const Revolution = (props) => {
           <img
             src='/assets/reviewIcon.svg'
             alt='magnifying glass'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
+            width="100%"
+            style={{ maxWidth:'40em' }}
+
           />
         </Grid>
       </Grid>
@@ -494,7 +516,8 @@ const Revolution = (props) => {
           <img
             src='/assets/designIcon.svg'
             alt='paintbrush leaving stroke of paint'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
+            width="100%"
+            style={{ maxWidth:'40em' }}
           />
         </Grid>
       </Grid>
@@ -549,7 +572,8 @@ const Revolution = (props) => {
           <img
             src='/assets/reviewIcon.svg'
             alt='magnifying glass'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
+            width="100%"
+            style={{ maxWidth:'40em' }}
           />
         </Grid>
       </Grid>
@@ -634,7 +658,8 @@ const Revolution = (props) => {
           <img
             src='/assets/buildIcon.svg'
             alt='building construnction site'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
+            width="100%"
+            style={{ maxWidth:'40em' }}
           />
         </Grid>
       </Grid>
@@ -700,7 +725,8 @@ const Revolution = (props) => {
             <img
               src='/assets/launchIcon.svg'
               alt='rocket'
-              style={{ maxWidth: matchesMD ? 200 : 1000 }}
+              width="100%"
+              style={{ maxWidth:'40em' }}
             />
           </Grid>
         </Grid>
@@ -766,7 +792,8 @@ const Revolution = (props) => {
           <img
             src='/assets/maintainIcon.svg'
             alt='wrench tightening bolts'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
+            width="100%"
+            style={{ maxWidth:'40em' }}
           />
         </Grid>
       </Grid>
@@ -833,8 +860,8 @@ const Revolution = (props) => {
           <img
             src='/assets/iterateIcon.svg'
             alt='rocket'
-            width='100%'
-            style={{ maxWidth: matchesMD ? 200 : 1000 }}
+            width="100%"
+            style={{ maxWidth:'40em' }}
           />
         </Grid>
       </Grid>

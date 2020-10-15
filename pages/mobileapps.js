@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from "next/head";
 import Lottie from 'react-lottie';
 import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -51,6 +52,24 @@ const MobileApps = (props) => {
 
   return (
     <Grid container direction='column'>
+      <Head>
+        <title key="title">
+          The Revolution - Cutting-Edge Software | Arc Development
+        </title>
+
+        <meta
+          name="description"
+          key="description"
+          content="Mobile Apps Made Easy | Our cutting-edge mobile app development process lets us build beautifully designed, carefully crafted apps for both iOS and Android."
+        />
+         <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | iOS/Android App Development"
+          key="og:title"
+        />
+         <meta property="og:url" key="og:url" content="arc.com/mobileapps" />
+        <link rel="canonical" key="canonical" href="arc.com/mobileapps" />
+        </Head>
       <Grid
         item
         container
@@ -80,7 +99,7 @@ const MobileApps = (props) => {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography variant='h2' align={matchesMD ? 'center' : undefined}>
+            <Typography variant='h1' align={matchesMD ? 'center' : undefined}>
               IOS/Android App Development
             </Typography>
           </Grid>
@@ -166,7 +185,13 @@ const MobileApps = (props) => {
           </Grid>
         </Grid>
         <Grid item md>
-          <Lottie options={defaultOptions} style={{ maxWidth: '20em' }} />
+        <Lottie
+            options={defaultOptions}
+            style={{
+              maxWidth: matchesMD ? "15em" : "20em",
+              height: matchesMD ? "20em" : undefined
+            }}
+          />
         </Grid>
         <Grid item container direction='column' md>
           <Grid item>
@@ -204,6 +229,10 @@ const MobileApps = (props) => {
         direction={matchesMD ? 'column' : 'row'}
         style={{ marginBottom: '10em' }}
         className={classes.rowContainer}
+        style={{
+          marginBottom: "15em",
+          display: matchesMD ? "grid" : undefined
+        }}
       >
         <Grid item container direction='column' alignItems='center' md>
           <Grid item>

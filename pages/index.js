@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from "next/head";
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -140,10 +141,30 @@ const LandingPage = (props) => {
 
   return (
     <Grid container direction='column' className={classes.mainContainer}>
+      <Head>
+          <title key="title">
+          Custom Software, Mobile Apps, and Websites | Arc Development
+          </title>
+
+          <meta
+          name="description"
+          key="description"
+          content="Pristine software custom-designed from the ground up with cutting-edge optimizations. Use our free estimate calculator to check your project cost!"
+        />
+  
+         <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Arc Development"
+          key="og:title"
+        />
+  
+        <meta property="og:url" key="og:url" content="arc.com" />
+        <link rel="canonical" key="canonical" href="arc.com" />
+      </Head>
       <Grid item>
         <Grid container justify='flex-end' alignItems='center' direction='row'>
           <Grid sm item className={classes.heroText}>
-            <Typography variant='h2' align='center'>
+            <Typography variant='h1' align='center'>
               Bring West Coast Technology <br />
               to the Midwest
             </Typography>
@@ -346,29 +367,28 @@ const LandingPage = (props) => {
           justify='center'
           alignItems='center'
         >
-          <Card className={classes.revolutionCard}>
+         <Card className={classes.revolutionCard}>
             <CardContent>
               <Grid
                 container
-                direction='column'
-                alignItems='center'
-                style={{ textAlign: 'center' }}
+                direction="column"
+                style={{ textAlign: "center" }}
               >
                 <Grid item>
-                  <Typography variant='h3' gutterBottom>
+                  <Typography variant="h3" gutterBottom>
                     The Revolution
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <Typography variant='subtitle1'>
+                  <Typography variant="subtitle1">
                     Visionary insights coupled with cutting-edge technology is a
                     recipe for revolution.
                   </Typography>
                   <Button
                     component={Link}
-                    href='/revolution'
+                    href="/revolution"
                     className={classes.learnButtonHero}
-                    variant='outlined'
+                    variant="outlined"
                     onClick={() => props.setValue(2)}
                   >
                     <span style={{ marginRight: 2 }}>Learn More</span>
@@ -413,7 +433,7 @@ const LandingPage = (props) => {
                 style={{ marginBottom: matcheXS ? '10em' : 0 }}
                 direction='column'
               >
-                <Typography variant='h2' style={{ color: 'white' }}>
+                <Typography variant='h1' style={{ color: 'white' }}>
                   About Us
                 </Typography>
                 <Typography variant='subtitle2'>Let's get personal.</Typography>
@@ -441,7 +461,7 @@ const LandingPage = (props) => {
               }}
             >
               <Grid container direction='column'>
-                <Typography variant='h2' style={{ color: 'white' }}>
+                <Typography variant='h1' style={{ color: 'white' }}>
                   Contact Us
                 </Typography>
                 <Typography variant='subtitle2'>Say hello!</Typography>

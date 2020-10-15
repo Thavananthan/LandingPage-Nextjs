@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from "next/head";
 import Lottie from 'react-lottie';
 import axios from 'axios';
 import { cloneDeep } from 'lodash';
@@ -765,6 +766,25 @@ const Estimate = () => {
 
   return (
     <Grid container direction='row'>
+       <Head>
+        <title key="title">
+            Free Custom Software Estimate | Arc Development
+        </title>
+
+        <meta
+          name="description"
+          key="description"
+          content="Use our free online estimate calculator to instantly check the cost of your custom software, mobile app, or website design and development project!"
+        />
+
+       <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Free Estimate"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/estimate" />
+        <link rel="canonical" key="canonical" href="arc.com/estimate" />
+      </Head>  
       <Grid
         item
         container
@@ -776,7 +796,7 @@ const Estimate = () => {
           item
           style={{ marginTop: '2em', marginLeft: matchesMD ? 0 : '5em' }}
         >
-          <Typography variant='h2' align={matchesMD ? 'center' : undefined}>
+          <Typography variant='h1' align={matchesMD ? 'center' : undefined}>
             Estimate
           </Typography>
         </Grid>
@@ -805,7 +825,7 @@ const Estimate = () => {
             <React.Fragment key={index}>
               <Grid item>
                 <Typography
-                  variant='h2'
+                  variant='h1'
                   align='center'
                   style={{
                     fontWeight: 500,
@@ -941,7 +961,7 @@ const Estimate = () => {
       >
         <Grid container justify='center'>
           <Grid item>
-            <Typography variant='h2' align='center'>
+            <Typography variant='h1' align='center'>
               Estimate
             </Typography>
           </Grid>

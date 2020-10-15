@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from "next/head";
 import axios from 'axios';
 import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -186,6 +187,26 @@ const Contact = (props) => {
 
   return (
     <Grid container direction='row'>
+      <Head>
+         <title key="title">Contact Us | Arc Development</title>
+         <meta
+          name="description"
+          key="description"
+          content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started!"
+        />
+
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Contact Us"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/contact" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://arc.com/contact.js"
+        />
+      </Head>   
       <Grid
         item
         container
@@ -203,7 +224,7 @@ const Contact = (props) => {
           <Grid container direction='column'>
             <Grid item>
               <Typography
-                variant='h2'
+                variant='h1'
                 align={matchesMD ? 'center' : undefined}
                 style={{ lineHeight: 1 }}
               >
@@ -481,7 +502,7 @@ const Contact = (props) => {
         >
           <Grid container direction='column'>
             <Grid item>
-              <Typography align={matchesMD ? 'center' : undefined} variant='h2'>
+              <Typography align={matchesMD ? 'center' : undefined} variant='h1'>
                 Simple Software.
                 <br />
                 Revolutionary Results.

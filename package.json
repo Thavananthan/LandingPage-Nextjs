@@ -8,6 +8,7 @@
     "@material-ui/styles": "^4.10.0",
     "axios": "^0.20.0",
     "clsx": "latest",
+    "fs-extra": "^9.0.1",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.2",
@@ -20,7 +21,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "start": "next start -p $PORT",
+    "postbuild": "node scripts/sitemap.js",
+    "heroku-postbuild":"npm run build"
   }
 }

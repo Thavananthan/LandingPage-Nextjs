@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from "next/head";
 import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -42,6 +43,23 @@ const Websites = (props) => {
 
   return (
     <Grid container direction='column'>
+      <Head>
+        <title key="title">
+          Stunning Custom Website Design | Arc Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Completely custom designed and built from scratch to be blazing fast. Optimized code, server-side rendering, and perfect responsive design | 99% PageSpeed Score"
+        />
+         <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Websites"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/websites" />
+        <link rel="canonical" key="canonical" href="arc.com/websites" />
+      </Head>  
       <Grid
         item
         container
@@ -71,7 +89,7 @@ const Websites = (props) => {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography variant='h2' align={matchesMD ? 'center' : undefined}>
+            <Typography variant='h1' align={matchesMD ? 'center' : undefined}>
               Website Development
             </Typography>
           </Grid>
